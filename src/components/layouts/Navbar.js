@@ -6,18 +6,18 @@ const Navbar = () => {
     const title = "Github Finder"
 
     return (
-        <div class="navbar bg-black-100 shadow-xl">
-            <div class="navbar-start">
+        <div className="navbar bg-black-100 shadow-xl">
+            <div className="navbar-start">
                 <div className="flex flex-row px-2 mx-2">
                     <Link to="/" className='text-lg font-bold align-middle' >
                         <FaGithub className="inline pr-2 text-3xl" />
                     </Link>
                 </div>
             </div>
-            <div class="navbar-center">
-                <a class="btn btn-ghost normal-case text-xl">Github Finder</a>
+            <div className="navbar-center">
+                <a href="/" className="btn btn-ghost normal-case text-xl">{title}</a>
             </div>
-            <div class="navbar-end">
+            <div className="navbar-end">
                 <div className="flex-1 px-2 mx-2">
                     <div className="flex justify-end">
                         <Link to="/" className='btn btn-ghost btn-sm rounded-btn' >

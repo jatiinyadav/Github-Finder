@@ -1,9 +1,11 @@
-import React from 'react'
+import UserResult from "../components/users/UserResult"
 
 const Home = () => {
+
   return (
     <div>
-      <h2 class="text-6xl text-center text-orange-500" >Home</h2>
+      <h2 className="text-6xl text-center text-orange-500" >Home</h2>
+      <UserResult />
     </div>
   )
 }
