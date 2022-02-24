@@ -5,30 +5,39 @@ import NotFound from './pages/NotFound'
 import Navbar from './components/layouts/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Footer from './components/layouts/Footer';
+import { GithubFinderProvider } from './context/Context';
+import { AlertProvider } from './context/alert/AlertContext'
 
 function App() {
   return (
-    <Router>
-      <div className="flex flex-col justify-between h-screen">
-        <Navbar />
 
-        <main className='container mx-auto px-3 pb-12 text-center' >
+    <GithubFinderProvider >
+      <AlertProvider>
+        <Router>
+          <div className="flex flex-col justify-between h-screen">
+            <Navbar />
 
-          <Routes>
+            <main className='container mx-auto px-3 pb-12' >
 
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/notfound' element={<NotFound />} />
-            <Route path='/*' element={<NotFound />} />
+              <Routes>
 
-          </Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/notfound' element={<NotFound />} />
+                <Route path='/*' element={<NotFound />} />
 
-        </main>
+              </Routes>
 
-        <Footer />
+            </main>
 
-      </div>
-    </Router>
+            <Footer />
+
+          </div>
+        </Router>
+      </AlertProvider>
+
+    </GithubFinderProvider>
+
   );
 }
 

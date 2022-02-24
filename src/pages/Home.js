@@ -1,10 +1,12 @@
 import UserResult from "../components/users/UserResult"
+import UserSearch from "../components/users/UserSearch"
 
 const Home = () => {
 
   return (
     <div>
-      <h2 className="text-6xl text-center text-orange-500" >Home</h2>
+      <br />
+      <UserSearch />
       <UserResult />
     </div>
   )
