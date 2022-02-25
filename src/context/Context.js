@@ -13,6 +13,7 @@ export const GithubFinderProvider = ({ children }) => {
 
     const initialState = {
         users: [],
+        singleUser: {},
         loading: false
     }
 
@@ -25,7 +26,7 @@ export const GithubFinderProvider = ({ children }) => {
     const [state, dispatch] = useReducer(githubReducer, initialState)
 
 
-    // Searching Users
+    // Searching All Users
     const searchResults = async (inputText) => {
 
         setLoading()
@@ -47,12 +48,37 @@ export const GithubFinderProvider = ({ children }) => {
         })
     }
 
+    // A Single User
+    const searchSingleUser = async (login) => {
+
+        setLoading()
+
+        const response = await fetch(`${GITHUB_URL}/users/${login}`, {
+            headers: {
+                Authorization: `token ${GITHUB_TOKEN}`
+            }
+        })
+
+        if (response.status === 404) {
+            window.location = '/notfound'
+        } else {
+            const data = await response.json()
+
+            dispatch({
+                type: 'GET_SINGLE_USER',
+                payload: data
+            })
+        } 
+
+    }
 
     return <GithubFinderContext.Provider value={{
         loading: state.loading,
         result: state.users,
+        singleUser: state.singleUser,
         users: initialState.users,
         searchResults,
+        searchSingleUser
     }} >
         {children}
 
