@@ -34,7 +34,7 @@ const UserSearch = () => {
 
     return (
         <>
-            <h1 className="text-5xl text-center mb-10 font-serif">
+            <h1 className="text-5xl text-center mb-10 font-serif text-accent">
                 Search Github Users around the Globe
             </h1>
 
@@ -69,7 +69,7 @@ const UserSearch = () => {
                                     type: "CLEAR_USER",
                                 })
                             }
-                            className="btn btn-ghost btn-lg"
+                            className="btn btn-ghost btn-lg text-primary"
                         >
                             CLEAR{" "}
                         </button>

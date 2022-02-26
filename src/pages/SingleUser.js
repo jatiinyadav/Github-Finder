@@ -55,10 +55,12 @@ const SingleUser = () => {
             // <div>{singleUser.login}</div>
             <>
                 <div className="w-full mx-auto lg:w-10/12">
-                    <div className="mb-4">
-                        <Link to="/" className="btn btn-ghost mt-2">
-                            <FaArrowLeft /> &nbsp; Back to Search
-                        </Link>
+                    <div className="mb-4 mt-5">
+                        <div className="text-secondary" >
+                            <Link to="/" className="btn btn-ghost">
+                                <FaArrowLeft /> &nbsp; <h2>Back to Search</h2>
+                            </Link>
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-3 md:gap-8">
@@ -75,15 +77,19 @@ const SingleUser = () => {
                         </div>
                         <div className="col-span-2">
                             <div className="mb-6">
-                                <h1 className="text-3xl card-title">
-                                    {name}
-                                    <div className="ml-2 mr-1 badge badge-success">{type}</div>
-                                    {hireable && (
-                                        <div className="mx-1 badge badge-info">Hireable </div>
-                                    )}
-                                </h1>
+                                <div className="text-3xl text-primary">
+                                    <h1>
+                                        {name}
+                                        <div className="ml-2 mr-1 badge badge-success">{type}</div>
+                                        {hireable && (
+                                            <div className="mx-1 badge badge-info">Hireable </div>
+                                        )}
+                                    </h1>
+                                </div>
                                 <br />
-                                <p>{bio}</p>
+                                <div className="rounded-none stats">
+                                    <p>{bio}</p>
+                                </div>
                                 <div className="mt-4 card-actions">
                                     <a
                                         href={html_url}
