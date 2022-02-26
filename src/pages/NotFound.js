@@ -10,7 +10,7 @@ const NotFound = () => {
 
       <Link to='/' >
         <button className="btn gap-2">
-          Back to Home
+          Back to Home  
           <FaHome />
         </button>
       </Link>

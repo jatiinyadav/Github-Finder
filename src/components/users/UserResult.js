@@ -5,15 +5,18 @@ import GithubFinderContext from "../../context/Context"
 
 const UserResult = () => {
 
-    const { loading, result } = useContext(GithubFinderContext)
+    const { loading, users } = useContext(GithubFinderContext)
 
     if (!loading) {
         return (
-            <div className="grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2" >
-                {result.map((item) => {
-                    return <UserDisplay key={item.id} value={item} />
-                })}
-            </div>
+            <>
+                <div className="grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2" >
+                    {users.map((item) => {
+                        return <UserDisplay key={item.id} value={item} />
+                    })}
+                </div>
+
+            </>
         )
     } else {
         return <Spinner />
