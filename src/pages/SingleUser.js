@@ -56,9 +56,9 @@ const SingleUser = () => {
             <>
                 <div className="w-full mx-auto lg:w-10/12">
                     <div className="mb-4 mt-5">
-                        <div className="text-secondary" >
+                        <div className="stats">
                             <Link to="/" className="btn btn-ghost">
-                                <FaArrowLeft /> &nbsp; <h2>Back to Search</h2>
+                                <FaArrowLeft /> &nbsp; &nbsp; Back to Search
                             </Link>
                         </div>
                     </div>

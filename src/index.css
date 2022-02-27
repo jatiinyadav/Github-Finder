@@ -7,7 +7,14 @@ body {
   /* background-color: rgb(37, 33, 33); */
 }
 
-.custom-card-image .card.image-full:before{
+.custom-card-image .card.image-full:before {
   border-radius: 0.5rem;
   opacity: 0.45;
+}
+
+@layer base {
+  @font-face {
+    font-family: "open-sans";
+    src: url(./components/layouts/assets/sans.ttf);
+  }
 }

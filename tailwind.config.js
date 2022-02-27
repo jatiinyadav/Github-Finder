@@ -1,7 +1,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': ['open-sans', 'sans-serif']
+      }
+    },
   },
   daisyui: {
     themes: ["cupcake", "synthwave", "cyberpunk", "valentine", "halloween", "luxury"]
