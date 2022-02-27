@@ -22,11 +22,10 @@ const Navbar = () => {
                             href="https://github.com/jatiinyadav/Github-Finder"
                             target="_blank"
                             rel="noreferrer"
-                            className="text-lg font-bold align-middle text-primary"
+                            className=""
                         >
-                            <div className="rounded-none stats">
-                                <FaGithub className="inline pr-2 text-3xl stat-value " />
-                            </div>
+
+                            <FaGithub className="text-3xl" />
                         </a>
                     </div>
                 </div>

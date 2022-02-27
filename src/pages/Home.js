@@ -5,7 +5,6 @@ const Home = () => {
 
   return (
     <div>
-      <br />
       <UserSearch />
       <UserResult />
     </div>

@@ -63,7 +63,7 @@ const SingleUser = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-3 md:gap-8">
+                    <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 mb-3 md:gap-8">
                         <div className="custom-card-image mb-6 mb:mb-0">
                             <div className="rounded-lg shadow-xl card image-full">
                                 <figure>
@@ -102,41 +102,47 @@ const SingleUser = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full rounded-lg shadow-md bg-base-100 stats">
-                                {location && (
-                                    <div className="stat">
-                                        <div className="stat-title text-md">Location</div>
-                                        <div className="text-lg stat-value">{location}</div>
-                                    </div>
-                                )}
-                                {twitter_username && (
-                                    <div className="stat">
-                                        <div className="stat-title text-md">Twitter Username</div>
-                                        <div className="text-lg stat-value">
-                                            <a
-                                                href={`https://twitter.com/${twitter_username}`}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                            >
-                                                {twitter_username}
-                                            </a>
+                            <div className="flex justify-between flex-wrap w-full shadow-md bg-base-100 stats">
+                                <div >
+                                    {location && (
+                                        <div className="stat">
+                                            <div className="stat-title text-md">Location</div>
+                                            <div className="text-lg stat-value">{location}</div>
                                         </div>
-                                    </div>
-                                )}
-                                {blog && (
-                                    <div className="stat">
-                                        <div className="stat-title text-md">Portfolio</div>
-                                        <div className="text-lg stat-value">
-                                            <a
-                                                href={`https://${blog}`}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                            >
-                                                {blog}
-                                            </a>
+                                    )}
+                                </div>
+                                <div>
+                                    {blog && (
+                                        <div className="stat">
+                                            <div className="stat-title text-md">Website</div>
+                                            <div className="text-lg stat-value">
+                                                <a
+                                                    href={`https://${blog}`}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    {blog}
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                )}
+                                    )}
+                                </div>
+                                <div>
+                                    {twitter_username && (
+                                        <div className="stat">
+                                            <div className="stat-title text-md">Twitter Username</div>
+                                            <div className="text-lg stat-value">
+                                                <a
+                                                    href={`https://twitter.com/${twitter_username}`}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    {twitter_username}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -162,6 +168,7 @@ const SingleUser = () => {
                             </div>
                         </div>
 
+
                         <div className="stat">
                             <div className="stat-figure text-secondary">
                                 <FaCodepen className="text-3xl md:text-5xl" />
@@ -171,6 +178,7 @@ const SingleUser = () => {
                                 {public_repos}
                             </div>
                         </div>
+
 
                         <div className="stat">
                             <div className="stat-figure text-secondary">
@@ -182,9 +190,9 @@ const SingleUser = () => {
                             </div>
                         </div>
                     </div>
-
                     <RepoList />
                 </div>
+
             </>
         );
     }
