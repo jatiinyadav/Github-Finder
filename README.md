@@ -1,7 +1,7 @@
 <div align="center">
   <h2 align = "center">Github Finder</h2>
 
-  <p align = "center">A React Application that let's you search for any GitHub User and check out their public information.</p>
+  <p align = "center">A React application that allows you to search and view public information of any GitHub user.</p>
 </div>
 
 ### API
