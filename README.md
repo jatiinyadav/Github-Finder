@@ -1,3 +1,5 @@
+![image](https://github.com/jatiinyadav/Github-Finder/blob/master/public/github-finder.png)
+
 <div align="center">
   <h2 align = "center">Github Finder</h2>
 
