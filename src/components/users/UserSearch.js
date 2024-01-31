@@ -28,6 +28,7 @@ const UserSearch = () => {
                 type: "GET_USER",
                 payload: users,
             });
+            setInputText("");
         }
     };
 
