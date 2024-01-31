@@ -1,3 +1,5 @@
+![image](https://github.com/jatiinyadav/Github-Finder/blob/master/public/github-finder.png)
+
 <div align="center">
   <h2 align = "center">Github Finder</h2>
 
@@ -31,14 +33,5 @@ git clone https://github.com/jatiinyadav/Github-Finder.git
 - Wait for the Issue to be assigned to you after which you can start working on it.
 - Fork the Repo and create a Branch for any Issue that you are working upon.
 - Create a Pull Request which will be promptly reviewed and suggestions would be added to improve it.
-
-
-## Code of Conduct
-
-You can find Code of Conduct [here](/CODE_OF_CONDUCT.md).
-
-### License
-
-This project includes [MIT License](/LICENSE).
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://jatiinyadav.github.io/)
